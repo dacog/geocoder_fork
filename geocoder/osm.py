@@ -387,6 +387,9 @@ class OsmQueryDetail(MultipleResultsQuery):
             self.url = url
         # else:  do not change self.url, which is cls._URL
 
+    def _build_headers(self, provider_key, **kwargs):
+        return {'User-Agent': 'DenisCarriere-geocoder/1.32.1'}
+
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
